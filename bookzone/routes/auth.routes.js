@@ -10,7 +10,7 @@ router.get('/signup', (req, res, next) => {
 
 router.post('/signup', async (req, res, next) => {
     try {
-        const newUser = await User.create({ username: req.body.username })
+        const newUser = await User.create(req.body)
         console.log('this is the new user', newUser)
     } catch (error) {
         console.log(error)
@@ -19,6 +19,16 @@ router.post('/signup', async (req, res, next) => {
 
 router.get('/login', (req, res, next) => {
     res.render('auth/login')
+})
+
+router.post('/login', async (req, res, next) => {
+    try {
+        const user = await User.findOne({ username: req.body.username })
+        console.log('this is a user', user)
+        res.redirect('/profile')
+    } catch (error) {
+        console.log(error)
+    }
 })
 
 module.exports = router;
