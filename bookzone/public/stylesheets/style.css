@@ -10,3 +10,9 @@ a {
 h1 {
   color: 15px;
 }
+
+navbar a {
+  background-color: antiquewhite;
+  border: solid 1px black;
+  padding: 10px;
+}
