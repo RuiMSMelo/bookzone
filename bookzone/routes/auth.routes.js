@@ -18,7 +18,7 @@ router.post('/signup', async (req, res, next) => {
             const newUser = await User.create({username: req.body.username, passwordHash})
             console.log('NEW USER: ',newUser)
 
-            res.redirect('auth/login')
+            res.redirect('/auth/login')
         }
         else {
             res.render('auth/signup', {errorMessage: 'Username already in use'})
@@ -37,8 +37,15 @@ router.get('/login', (req, res, next) => {
 router.post('/login', async (req, res, next) => {
     try {
         const user = await User.findOne({ username: req.body.username })
-        console.log('this is a user', user)
-        res.redirect('/profile')
+        if (!!user) {
+            if (bcryptjs.compareSync(req.body.password, user.passwordHash)){
+                 res.redirect('/profile')
+            } else {
+                res.render('auth/login', {errorMessage: 'Incorrect password'})
+            } 
+        } else {
+            res.render('auth/login', {errorMessage: 'Incorrect username'})    
+        }
     } catch (error) {
         console.log(error)
     }
