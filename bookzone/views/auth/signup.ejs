@@ -5,3 +5,7 @@
     <label>Password:<input type="password" name="password" placeholder="Enter a password"/></label>
     <button>Sign Up</button>
 </form>
+
+<% if (typeof errorMessage !== "undefined") { %>
+ <p style="color: tomato;"><%= errorMessage %></p>
+<% } %>
