@@ -20,3 +20,9 @@ navbar a {
 navbar form {
   margin-left: 500px
 }
+
+a {
+  background-color: antiquewhite;
+  border: solid 1px black;
+  padding: 10px;
+}
