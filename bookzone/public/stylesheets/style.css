@@ -16,3 +16,7 @@ navbar a {
   border: solid 1px black;
   padding: 10px;
 }
+
+navbar form {
+  margin-left: 500px
+}
