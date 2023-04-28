@@ -5,6 +5,7 @@ const { isLoggedIn } = require('../middleware/route-guard')
 const bcryptjs = require('bcryptjs')
 const saltRounds = 13
 
+
 router.get('/signup', (req, res, next) => {
     res.render('auth/signup')
 })
