@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const User = require('../models/User.model')
 const bcryptjs = require('bcryptjs')
+const { isLoggedIn } = require('../middleware/route-guard')
 const saltRounds = 13
 
 router.get('/signup', (req, res, next) => {
@@ -16,7 +17,7 @@ router.post('/signup', async (req, res, next) => {
             const salt = bcryptjs.genSaltSync(saltRounds)
             const passwordHash = bcryptjs.hashSync(req.body.password, salt)
             const newUser = await User.create({username: req.body.username, passwordHash})
-            console.log('NEW USER: ', newUser)
+            console.log('NEW USER: ', newUser )
 
             res.redirect('/auth/login')
         }

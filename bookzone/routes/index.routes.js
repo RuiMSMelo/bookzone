@@ -9,7 +9,6 @@ router.get("/", (req, res, next) => {
 });
 
 router.get('/profile', isLoggedIn, (req, res, next) => {
-  res.render('profile')
   console.log(req.session)
   res.render('profile', { user: req.session.user })
 })
