@@ -7,7 +7,7 @@ const bookSchema = new Schema(
       type: String,
       //trim: true,
       //required: true,
-      unique: true
+      //unique: true
     },
     author: {
       type: String,
@@ -20,6 +20,10 @@ const bookSchema = new Schema(
     },
     cover: {
       type: String,
+    },
+    createdBy: {
+      type: Schema.Types.ObjectId,
+      ref: 'User'
     }
   },
   {

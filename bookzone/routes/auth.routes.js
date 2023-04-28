@@ -41,7 +41,7 @@ router.post('/login', async (req, res, next) => {
         const user = await User.findOne({ username: req.body.username })
         if (!!user) {
             if (bcryptjs.compareSync(req.body.password, user.passwordHash)){
-                req.session.user = {user: user.username}
+                req.session.user = {user: user.username, userId: user.id}
                 console.log(user)
                 res.redirect('/profile')
             } else {
