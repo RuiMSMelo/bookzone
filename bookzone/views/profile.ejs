@@ -4,14 +4,15 @@
 <h2>Hello <span class="user-caps"><%= user.user %></span></h2>
 
 <a href="/books/add-book">Add new book</a>
-<!-- <a href="/books/update-book">Update a book</a>
-<a href="/books/delete-book">Delete a book</a> -->
+<a href="/books/read">Read books</a>
+<a href="/books/unread">Unread books</a>
 
 <% usersBooks.forEach(element => { %>
  <div style="border: solid 1px black;">
     <h3><%= element.bookTitle %></h3>
-    <p><%= element.author %></p>
-    <p><%= element.genre  %></p>
+    <p>Author: <%= element.author %></p>
+    <p>Genre: <%= element.genre  %></p>
+    <p><%= element.read %></p>
     <a href="/books/update-book/<%= element._id %>">Update</a>
     <a href="/books/delete-book/<%= element._id %>" onclick="return confirm('Are you sure you want to delete this book?');">Delete</a>
  </div>

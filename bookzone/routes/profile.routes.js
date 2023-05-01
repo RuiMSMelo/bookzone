@@ -52,5 +52,23 @@ router.get('/delete-book/:bookId', async (req, res, next) => {
     }
 })
 
+router.get('/read', async (req, res, next) => {
+    try {
+        const readBooks = await Book.find({ read: 'Yes' })
+        res.render('books/read-books', {readBooks})
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+router.get('/unread', async (req, res, next) => {
+    try {
+        const unreadBooks = await Book.find({ read: 'No' })
+        res.render('books/unread-books', {unreadBooks})
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 
 module.exports = router;

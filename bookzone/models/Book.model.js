@@ -24,6 +24,10 @@ const bookSchema = new Schema(
     createdBy: {
       type: Schema.Types.ObjectId,
       ref: 'User'
+    },
+    read: {
+      type: String,
+      enum: ['Yes', 'No']
     }
   },
   {
