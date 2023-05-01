@@ -21,22 +21,22 @@ router.post('/add-book', async (req, res, next) => {
 })
 
 router.get('/update-book/:bookId', async (req, res, next) => {
-    const bookToUpdate = await Book.findById(req.params.bookId)
-    console.log(bookToUpdate)
-    res.render('books/update-book', req.body)
+    try {
+        const bookToUpdate = await Book.findById(req.params.bookId)
+        console.log("book TO update: " ,bookToUpdate)
+        res.render('books/update-book', {bookToUpdate})
+    } catch (error) {
+        console.log(error)
+    }
+    
 })
-
-// ---------------------------MONDAY--------------------------------
-// WE NEED TO FIND A WAY TO SEND THE ID IN THE PARAMS TO
-// THE UPDATE PAGE SO IT KNOWS WHAT BOOK TO UPDATE IN MONGODB
 
 router.post('/update-book/:bookId', async (req, res, next) => {
     try {
         const {bookId} = req.params
         const updatedBook = await Book.findByIdAndUpdate(bookId, req.body, {new: true})
-        console.log('NEW BOOK: ', updatedBook )
+        console.log('updated book: ' ,updatedBook)
         res.redirect('/profile')
-      
     } catch (error) {
         console.log(error)
     }

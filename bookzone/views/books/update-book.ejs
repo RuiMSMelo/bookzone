@@ -1,7 +1,7 @@
 <h1>Update book</h1>
-<form method="POST" action="/books/update-book/">
-    <label>Title:<input type="text" name="title"/></label>
-    <label>Author:<input type="text" name="author"/></label>
-    <label>Genre:<input type="text" name="genre"/></label>
-    <button><a href="/profile">Update</a></button>
+<form method="POST">
+    <label>Title:<input type="text" name="title" value="<%= bookToUpdate.bookTitle %>"/></label>
+    <label>Author:<input type="text" name="author" value="<%= bookToUpdate.author %>"/></label>
+    <label>Genre:<input type="text" name="genre" value="<%= bookToUpdate.genre %>"/></label>
+    <button>Update</button>
 </form>
