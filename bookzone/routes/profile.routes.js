@@ -26,12 +26,9 @@ router.get('/update-book/:bookId', async (req, res, next) => {
     res.render('books/update-book', req.body)
 })
 
-
-
 // ---------------------------MONDAY--------------------------------
 // WE NEED TO FIND A WAY TO SEND THE ID IN THE PARAMS TO
 // THE UPDATE PAGE SO IT KNOWS WHAT BOOK TO UPDATE IN MONGODB
-
 
 router.post('/update-book/:bookId', async (req, res, next) => {
     try {

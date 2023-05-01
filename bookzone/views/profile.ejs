@@ -1,9 +1,9 @@
 <h1>Profile page</h1><form method="POST" action="/logout">
     <button id="logOutButton">Log Out</button>
 </form>
-<h2>Hello <%= user.user %></h2>
+<h2>Hello <span class="user-caps"><%= user.user %></span></h2>
 
-<a href="/books/add-book">Add a new book</a>
+<a href="/books/add-book">Add new book</a>
 <a href="/books/update-book">Update a book</a>
 <a href="/books/delete-book">Delete a book</a>
 
@@ -13,7 +13,7 @@
     <p><%= element.author %></p>
     <p><%= element.genre  %></p>
     <p><%= element._id %></p>
-    <button><a href="/books/update-book/<%= element._id %>">Update</a></button>
+   <a href="/books/update-book/<%= element._id %>">Update</a>
     <button><a href="/books/delete-book/<%= element._id %>">Delete</a></button>
  </div>
 <% }) %>
