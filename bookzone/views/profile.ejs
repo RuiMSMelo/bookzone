@@ -17,7 +17,7 @@
 <a href="/books/read">Read books</a>
 <a href="/books/unread">Unread books</a>
 </div>
-
+<p><%= usersBooks.createdBy %></p>
 <% usersBooks.forEach(element => { %>
  <div style="border: solid 1px black;" class="general-font">
     <h3><%= element.bookTitle %></h3>

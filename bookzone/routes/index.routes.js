@@ -12,11 +12,9 @@ router.get("/", (req, res, next) => {
 
 router.get('/profile', isLoggedIn, async (req, res, next) => {
   try {
-    const usersBooks = await Book.find(req.session.user.user.userId)
-    console.log(req.session)
+    const usersBooks = await Book.find({createdBy: req.session.user.userId})
     res.render('profile', { user: req.session.user, usersBooks})
-    console.log(usersBooks)
-
+    
   } catch (error) {
     console.log(error)
   }
