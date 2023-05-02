@@ -1,14 +1,16 @@
-<h1>Profile page</h1><form method="POST" action="/logout">
+<h1 class="subtitle-font">Profile page</h1><form method="POST" action="/logout">
     <button id="logOutButton">Log Out</button>
 </form>
-<h2>Hello <span class="user-caps"><%= user.user %></span></h2>
+<h2 class="subtitle-font">Hello <span class="user-caps"><%= user.user %></span></h2>
 
+<div class="general-font">
 <a href="/books/add-book">Add new book</a>
 <a href="/books/read">Read books</a>
 <a href="/books/unread">Unread books</a>
+</div>
 
 <% usersBooks.forEach(element => { %>
- <div style="border: solid 1px black;">
+ <div style="border: solid 1px black;" class="general-font">
     <h3><%= element.bookTitle %></h3>
     <p>Author: <%= element.author %></p>
     <p>Genre: <%= element.genre  %></p>

@@ -1,11 +1,24 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  
+}
+
+.title-font {
+  font-family: Ablation;
+}
+
+.subtitle-font {
+  font-family: 'Raleway', sans-serif;
+}
+
+.general-font {
+  font-family: 'Arimo', sans-serif;
 }
 
 a {
   color: #00b7ff;
-  background-color: antiquewhite;
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 10px;
   text-decoration: none;
@@ -17,7 +30,7 @@ h1 {
 }
 
 navbar a {
-  background-color: antiquewhite;
+  background-color: #ffffff;
   justify-content: center;
   padding: 10px;
 }
@@ -32,4 +45,12 @@ h3 {
 
 .user-caps {
   text-transform: uppercase;
+}
+
+
+
+
+footer {
+  color: #ADADAD
+  
 }
