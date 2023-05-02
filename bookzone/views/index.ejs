@@ -1,3 +1,20 @@
 <!-- <h1><%= appTitle %></h1> -->
-<img id="name-logo" src="images/bookzonelogo.png">
-<img id="books-logo" src="images/homelogo.png">
+<div id="index" class="general-font">
+    
+    <div id="index-imgs">
+      <img id="books-logo" src="images/homelogo.png" alt="logo">
+      <img id="name-logo" src="images/bookzonelogo.png" alt="bookzone">
+    </div>
+
+    <div id="index-btns">
+  <%if (isLoggedIn) { %>
+        <a href="/profile">Profile</a>  
+  
+   <% }else { %> 
+    
+        <a href="/auth/signup" id="signup-btn">Sign Up</a>
+        <a href="/auth/login" id="login-btn">Log In</a> 
+    
+        <% } %>
+    </div>
+    </div>

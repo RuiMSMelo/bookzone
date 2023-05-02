@@ -1,10 +1,12 @@
-<h1>Login Page</h1>
-<form method="POST" action="/auth/login">
-    <label>Username:<input type="text" name="username" placeholder="Enter a username"/></label>
-    <label>Password:<input type="password" name="password" placeholder="Enter a password"/></label>
-    <button>Login</button>
+<div class="login-page">
+    <img src="/images/cockroachcircle.png" id="login-img"/>
+<form method="POST" action="/auth/login" class="general-font">
+    <label><input type="text" name="username" placeholder="Enter a username" class="input-fields"/></label><br>
+    <label><input type="password" name="password" placeholder="Enter a password" class="input-fields"/></label><br>
+    <button class="btns">Login</button>
 </form>
 
 <% if (typeof errorMessage !== "undefined") { %>
  <p style="color: tomato;"><%= errorMessage %></p>
 <% } %>
+</div>

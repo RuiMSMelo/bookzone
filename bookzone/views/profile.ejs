@@ -1,7 +1,16 @@
-<h1 class="subtitle-font">Profile page</h1><form method="POST" action="/logout">
-    <button id="logOutButton">Log Out</button>
-</form>
-<h2 class="subtitle-font">Hello <span class="user-caps"><%= user.user %></span></h2>
+<navbar class="general-font">
+    <a href="/">Home</a>
+    <form method="POST" action="/logout">  
+        <button class="btns">Log Out</button>
+    </form>
+  </navbar>
+
+ 
+
+<h1 class="subtitle-font">Profile</h1>
+    
+
+<h2 class="subtitle-font">Hello <span class="user-caps"><%= user.user %>!</span></h2>
 
 <div class="general-font">
 <a href="/books/add-book">Add new book</a>

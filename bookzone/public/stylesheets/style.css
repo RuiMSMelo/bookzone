@@ -1,11 +1,7 @@
 body {
   padding: 50px;
   color: #ffffff;
-  
-}
-
-.title-font {
-  font-family: Ablation;
+  height: 80vh;
 }
 
 .subtitle-font {
@@ -16,10 +12,103 @@ body {
   font-family: 'Arimo', sans-serif;
 }
 
-a {
-  color: #00b7ff;
+#index {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+#name-logo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#books-logo {
+  width: 10%;
+  margin: 120px auto 0;
+}
+
+#index-imgs {
+  display: flex;
+  flex-direction: column;
+}
+
+#index-btns {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+}
+
+#signup-btn {
+  text-align: center;
+}
+
+#login-btn {
+  margin-top: 10px;
+  text-align: center;
+  width: 100px;
+}
+
+.signup-page >* {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+#profile-img {
+  width: 100px;
+  margin: 100px auto 0;
+}
+
+.login-page >* {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+#login-img {
+  width: 100px;
+  margin: 100px auto 0;
+}
+
+.btns {
+  border-radius: 15px;
+  width: 90px;
+  height: 40px;
+  padding: 10px;
+  color: #191919;
   background-color: #ffffff;
-  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+}
+
+.input-fields {
+  width: 20vw;
+  height: 2vw;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: 'Arimo', sans-serif;
+  background-color: #ADADAD;
+}
+
+input:focus {
+  outline: 0;
+  background-color: #ADADAD;
+}
+
+a {
+  color: #191919;
+  background-color: #ffffff;
+  border-radius: 10px;
   padding: 10px;
   text-decoration: none;
 }
@@ -47,10 +136,12 @@ h3 {
   text-transform: uppercase;
 }
 
-
-
-
 footer {
-  color: #ADADAD
-  
+  color: #ADADAD;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 15px;
 }
