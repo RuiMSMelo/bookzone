@@ -1,12 +1,12 @@
-<navbar class="general-font">
+<navbar class="general-font" id="profile-navbar">
     <a href="/">Home</a>
     <a href="/profile">Profile</a>   
   </navbar>
   
 <h1 class="subtitle-font">Update book</h1>
-<form method="POST" class="general-font">
-    <label>Title:<input type="text" name="title" value="<%= bookToUpdate.bookTitle %>"/></label>
-    <label>Author:<input type="text" name="author" value="<%= bookToUpdate.author %>"/></label>
-    <label>Genre:<input type="text" name="genre" value="<%= bookToUpdate.genre %>"/></label>
-    <button>Update</button>
+<form method="POST" class="general-font" id="update-book-page">
+    <label>Title: <input type="text" name="title" value="<%= bookToUpdate.bookTitle %>" class="input-fields"/></label><br>
+    <label>Author: <input type="text" name="author" value="<%= bookToUpdate.author %>" class="input-fields"/></label><br>
+    <label>Genre: <input type="text" name="genre" value="<%= bookToUpdate.genre %>" class="input-fields"/></label><br>
+    <button class="btns">Update</button>
 </form>

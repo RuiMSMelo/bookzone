@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 0 50px 50px 50px;
   margin: 0;
   color: #ffffff;
@@ -52,6 +55,10 @@ body {
   width: 100px;
 }
 
+.signup-page {
+  margin-top: 100px;
+}
+
 .signup-page >* {
   display: flex;
   align-items: center;
@@ -87,6 +94,7 @@ body {
   font-size: 15px;
   font-family: 'Arimo', sans-serif;
   text-transform: uppercase;
+  margin-top: 30px;
 }
 
 .input-fields {
@@ -116,6 +124,7 @@ a {
 
 h1 {
   text-transform: uppercase;
+  margin: 40px 0px;
 }
 
 
@@ -138,6 +147,7 @@ h3 {
   width: 300px;
   margin: 20px;
   justify-items: center;
+  border-radius: 20px;
 }
 
 #book-box-child {
@@ -162,11 +172,6 @@ h3 {
   margin-top: 40px;
 }
 
-#profile-img {
-  width: 50px;
-  margin-top: 0;
-}
-
 #navbar-leftitems {
   display: flex;
   flex-direction: row;
@@ -189,6 +194,56 @@ h3 {
 
 #profile-buttons > a {
   margin: 0px 5px 0px 5px;
+}
+
+#add-book-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#update-book-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.yes-no-btn {
+  border-radius: 15px;
+  width: 70px;
+  height: 25px;
+  text-align: center;
+  color: #191919;
+  background-color: #ADADAD;
+  border: none;
+  font-size: 15px;
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+}
+
+.book-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 50px;
+  
+}
+
+.book-tray {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  flex-wrap: wrap;
+  width: 200px;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.book-tray > * {
+  margin: 10px;
 }
 
 footer {

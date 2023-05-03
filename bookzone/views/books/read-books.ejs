@@ -1,15 +1,19 @@
-<navbar class="general-font">
+<navbar class="general-font" id="profile-navbar">
     <a href="/">Home</a>
     <a href="/profile">Profile</a>   
   </navbar>
 
 <h1 class="subtitle-font">Read Books</h1>
 
-<% readBooks.forEach(book => { %>
-   
-<div class="general-font">
+
+<div class="book-group"> 
+  <% readBooks.forEach(book => { %>
+<div style="border: solid 1px #737373;" class="general-font book-tray">
+
     <h3><%= book.bookTitle %></h3>
     <p>Author: <%= book.author %></p>
     <p>Genre: <%= book.genre  %></p>
+   
 </div>
-    <% }) %>
+<% }) %>
+</div>

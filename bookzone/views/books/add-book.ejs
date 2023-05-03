@@ -1,13 +1,15 @@
-<navbar class="general-font">
+<navbar class="general-font" id="profile-navbar">
     <a href="/">Home</a>
     <a href="/profile">Profile</a>   
   </navbar>
   
 <h1 class="subtitle-font">Add a book</h1>
-<form method="POST" class="general-font">
-    <label>Title:<input type="text" name="bookTitle" placeholder="Enter a title"/></label>
-    <label>Author:<input type="text" name="author" placeholder="Enter an author"/></label>
-    <label>Genre:<input type="text" name="genre" placeholder="Enter a genre"/></label>
-    <label>Read:<select type="text" name="read"><option>Yes</option><option>No</option></select></label>
-    <button>Add</button>
+<form method="POST" class="general-font" id="add-book-page">
+
+    <label>Title: <input type="text" name="bookTitle" placeholder="Enter a title" class="input-fields"/></label><br>
+    <label>Author: <input type="text" name="author" placeholder="Enter an author" class="input-fields"/></label><br>
+    <label>Genre: <input type="text" name="genre" placeholder="Enter a genre" class="input-fields"/></label><br>
+    <label>Read: <select type="text" name="read" class="yes-no-btn"><option>Yes</option><option>No</option></select></label><br>
+    <button class="btns">Add</button>
+ 
 </form>
