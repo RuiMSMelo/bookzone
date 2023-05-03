@@ -8,6 +8,10 @@ body {
   height: 100vh;
 }
 
+#asdf {
+  background-color: #ADADAD;
+}
+
 .subtitle-font {
   font-family: 'Raleway', sans-serif;
 }
@@ -127,9 +131,9 @@ h1 {
   margin: 40px 0px;
 }
 
-
 h3 {
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .user-caps {
@@ -140,7 +144,6 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
 }
 
 #book-box-middle {
@@ -148,10 +151,17 @@ h3 {
   margin: 20px;
   justify-items: center;
   border-radius: 20px;
+  flex-direction: column;
+  align-content: space-between;
+  margin-bottom: auto;
 }
 
 #book-box-child {
   margin: 20px;
+}
+
+#book-box-child > *{
+  width: 100%;
 }
 
 #book-box-buttons{
@@ -254,4 +264,58 @@ footer {
   width: 100%;
   text-align: center;
   padding-bottom: 15px;
+}
+
+.hr {
+  color: #ADADAD;
+  margin-top: 0;
+}
+
+#openbookimg, #closedbookimg {
+ width: 30px;
+ height: 30px;
+ align-items: center;
+}
+
+#readdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+}
+
+#unreaddiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+}
+
+#readdiv > p {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+#unreaddiv > p {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.readunreadimages {
+  width: 100px;
+}
+
+.readunreadpagediv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.readunreadpagediv > h1 {
+  margin-left: 20px;
 }

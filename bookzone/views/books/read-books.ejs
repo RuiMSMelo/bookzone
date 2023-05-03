@@ -2,18 +2,18 @@
     <a href="/">Home</a>
     <a href="/profile">Profile</a>   
   </navbar>
-
-<h1 class="subtitle-font">Read Books</h1>
+<div class="readunreadpagediv">
+  <img src="\images\openbookcircle.png" alt="openbookimage" class="readunreadimages">
+  <h1 class="subtitle-font">Read Books</h1>
+</div>
 
 
 <div class="book-group"> 
   <% readBooks.forEach(book => { %>
-<div style="border: solid 1px #737373;" class="general-font book-tray">
-
-    <h3><%= book.bookTitle %></h3>
+  <div style="border: solid 1px #737373;" class="general-font book-tray">
+    <h3><%= book.bookTitle %></h3><hr class="hr">
     <p>Author: <%= book.author %></p>
     <p>Genre: <%= book.genre  %></p>
-   
 </div>
 <% }) %>
 </div>

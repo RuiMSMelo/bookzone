@@ -2,14 +2,16 @@
     <a href="/">Home</a>
     <a href="/profile">Profile</a>   
   </navbar>
+<div class="readunreadpagediv">
+  <img src="\images\closedbookcircle.png" alt="openbookimage" class="readunreadimages">
+  <h1 class="subtitle-font">Unread Books</h1>
+</div>
 
-<h1 class="subtitle-font">Unread Books</h1>
 
 <div class="book-group">
-  <% unreadBooks.forEach(book => { %>
-    
+  <% unreadBooks.forEach(book => { %>  
     <div style="border: solid 1px #737373;" class="general-font book-tray">
-        <h3><%= book.bookTitle %></h3>
+        <h3><%= book.bookTitle %></h3><hr class="hr">
         <p>Author: <%= book.author %></p>
         <p>Genre: <%= book.genre  %></p>
     </div>

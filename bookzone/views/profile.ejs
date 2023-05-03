@@ -21,10 +21,20 @@
   <% usersBooks.forEach(element => { %>
   <div style="border: solid 1px #737373;" class="general-font" id="book-box-middle">
     <div id="book-box-child">
-      <h3><%= element.bookTitle %></h3>
+      <h3><%= element.bookTitle %></h3><hr class="hr">
       <p>Author: <%= element.author %></p>
       <p>Genre: <%= element.genre  %></p>
-      <p>Read: <%= element.read %></p>
+      <% if (element.read === 'Yes') { %>
+        <div id="readdiv">
+          <img src="\images\openbookcircle.png" alt="openbookimage" id="openbookimg">
+          <p>Already read</p>
+        </div>
+        <% } else { %>
+        <div id="unreaddiv">
+          <img src="\images\closedbookcircle.png" alt="openbookimage" id="closedbookimg">
+          <p>Haven't read yet</p>
+        </div>
+      <% } %>
     </div>
     <div id="book-box-buttons">
       <a href="/books/update-book/<%= element._id %>">Update</a>

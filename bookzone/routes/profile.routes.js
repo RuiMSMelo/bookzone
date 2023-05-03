@@ -35,7 +35,7 @@ router.post('/update-book/:bookId', async (req, res, next) => {
     try {
         const {bookId} = req.params
         const updatedBook = await Book.findByIdAndUpdate(bookId, req.body, {new: true})
-        console.log('updated book: ' ,updatedBook)
+        console.log('updated book: ', updatedBook)
         res.redirect('/profile')
     } catch (error) {
         console.log(error)
@@ -54,7 +54,7 @@ router.get('/delete-book/:bookId', async (req, res, next) => {
 
 router.get('/read', async (req, res, next) => {
     try {
-        const readBooks = await Book.find({ read: 'Yes' })
+        const readBooks = await Book.find({ read: 'Yes' , createdBy: req.session.user.userId})
         res.render('books/read-books', {readBooks})
     } catch (error) {
         console.log(error)
@@ -63,7 +63,7 @@ router.get('/read', async (req, res, next) => {
 
 router.get('/unread', async (req, res, next) => {
     try {
-        const unreadBooks = await Book.find({ read: 'No' })
+        const unreadBooks = await Book.find({ read: 'No' , createdBy: req.session.user.userId})
         res.render('books/unread-books', {unreadBooks})
     } catch (error) {
         console.log(error)
