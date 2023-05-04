@@ -25,7 +25,7 @@ With just 5 days to develop this project we decided to keep it simple and straig
 
 ### Not implemented yet backlog ideas
 - Recomend me a book
-- Follow another account
+- Follow other users
 
 ## URLs
 https://bookzone.adaptable.app/
