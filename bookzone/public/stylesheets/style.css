@@ -97,7 +97,7 @@ body {
   border: none;
   font-size: 15px;
   font-family: 'Arimo', sans-serif;
-  text-transform: uppercase;
+  cursor: pointer;
   margin-top: 30px;
 }
 
